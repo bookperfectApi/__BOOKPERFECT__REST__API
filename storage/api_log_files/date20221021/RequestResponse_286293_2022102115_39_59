@@ -1,0 +1,2 @@
+RequestName:  https://cms.hitrooms.com/rest-api/get__destination__by_code/BAK
+Response: {"status":"NOT_FOUND","error":["Destination not found"]}

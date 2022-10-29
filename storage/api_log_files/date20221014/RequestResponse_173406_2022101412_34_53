@@ -1,0 +1,2 @@
+RequestName:  https://cms.hitrooms.com/rest-api/get__Booking_all/istanbul/paris
+Response: {"error":["Invalid date format. It has to be yyyyMMdd"]}

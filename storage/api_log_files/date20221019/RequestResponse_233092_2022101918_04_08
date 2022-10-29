@@ -1,0 +1,2 @@
+RequestName:  https://cms.hitrooms.com/rest-api/create__user
+Response: {"username":"permissionuser@gmail.com","name":"permission","surname":"user","email":"permissionuser@gmail.com","telephone":"5373035079","country":"TR","birthDate":"2022-08-22","documentNumber":"1234","active":true,"newsletter":true,"b2c":true,"profile":"USER","providerConfigs":[],"referralId":"63","agency":"bookperfect","rewards":[],"externalCode":"50","courtesyTitle":"MS"}

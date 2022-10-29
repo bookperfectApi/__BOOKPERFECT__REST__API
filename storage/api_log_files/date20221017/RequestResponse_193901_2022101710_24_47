@@ -1,0 +1,2 @@
+RequestName:  https://cms.hitrooms.com/rest-api/get__user/saip@hotelistan.com/Saip@2022
+Response: {"status":"UNAUTHORIZED","error":["Error retrieving auth token"]}

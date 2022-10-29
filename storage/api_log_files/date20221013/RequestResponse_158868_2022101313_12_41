@@ -1,0 +1,2 @@
+RequestName:  https://cms.hitrooms.com/rest-api/get__TripIdeasCategoriesHotelten__by__name/Tokyo
+Response: [{"id":22,"HotelLocationCity":"Tokyo","HotelLocationCountry":"Japan","HotelLocationContinent":"Asia","HotelID":"MASTER-262785","DrupalCityID":null,"HotelStartRate":100,"created_at":"2022-10-06T15:05:55.000000Z","updated_at":"2022-10-06T15:05:55.000000Z"}]

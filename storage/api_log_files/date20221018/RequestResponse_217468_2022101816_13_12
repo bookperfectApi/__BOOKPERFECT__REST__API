@@ -1,0 +1,2 @@
+RequestName:  https://cms.hitrooms.com/rest-api/get__user_id/apiuser/eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJib29rcGVyZmVjdC1hcGl1c2VyIiwiZXhwIjoxNjY2MTAwNTgzLCJqdGkiOiIxRjMxNzFBOC0yRUZFLTRCQjYtQjZENC02NkZEMjY0MDUzRTYifQ.iUGhGEFuoKKFqMaGdbsytVy9iK6ljU0t8924pNoRblOy3utqtEgc0YOOS4supjFhHJNZIcj1QOMa-6blXqOxyQ
+Response: {"username":"apiuser","name":"apiuser","surname":"apiuser","email":"oguz.guldali@hotelistan.com","active":true,"newsletter":false,"b2c":false,"profile":"WSUSER_WR","providerConfigs":[],"agency":"bookperfect","rewards":[]}

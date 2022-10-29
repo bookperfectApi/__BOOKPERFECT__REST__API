@@ -1,0 +1,2 @@
+RequestName:  https://cms.hitrooms.com/rest-api/get__user/someone@gmail.com/1234
+Response: {"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJib29rcGVyZmVjdC1zb21lb25lQGdtYWlsLmNvbSIsImV4cCI6MTY2NjE5NDg3OCwianRpIjoiMDYzRDUzNkUtMUVENC00MkNELThENEUtQzUzM0IzQUFCNTM3In0.lgVEgJAKQ2D5BU8GzoknKY1-crSvci0LGcsA62de7S_LAMj-epruSev-lytAPkqBaRjD_X2Jz3OnY4zQn3FYxQ","expirationInSeconds":1800}

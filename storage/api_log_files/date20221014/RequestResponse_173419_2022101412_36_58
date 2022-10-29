@@ -1,0 +1,2 @@
+RequestName:  https://cms.hitrooms.com/rest-api/get__Booking_all/20221010/20221010
+Response: {"pagination":{"firstResult":0,"pageResults":0,"totalResults":0},"bookedTrip":[]}

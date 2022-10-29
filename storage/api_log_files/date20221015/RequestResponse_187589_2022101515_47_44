@@ -1,0 +1,2 @@
+RequestName:  https://cms.hitrooms.com/rest-api/get__destination__by_code/ANK
+Response: {"error":["auth-token: must not be null"]}
