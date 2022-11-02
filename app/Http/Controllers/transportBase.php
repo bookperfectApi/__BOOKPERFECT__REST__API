@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+
 /**
  * @OA\Get(
  *  path="/get_transportBase",
@@ -40,9 +42,9 @@ class transportBase extends Controller
             echo "cURL Error #:" . $err;
             $status = 0;
         } else {
-            if(isset(json_decode($response, true)["error"])){
+            if (isset(json_decode($response, true)["error"])) {
                 $status = 0;
-            }else{
+            } else {
                 $status = 1;
             }
             return $this->log(url()->current(), request()->ip(), $status, $response);

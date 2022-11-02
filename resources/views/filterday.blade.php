@@ -71,19 +71,20 @@
         </div>
     </div>
     <div style="width:100%;height:10vh;display:flex;justify-content:center;align-items:center;">
-        <form action="{{ route('filterbyday') }}" method="GET" style="width:50%;height:60%;display: flex;">
+        <form action="{{ route('filterbyday') }}" method="GET" style="width:40%;height:60%;display: flex;">
             <select class="form-select form-select-lg" aria-label=".form-select-lg example" name="day"
-                style="width:80%;">
-                <option >First Page</option>
-                <option selected>{{$dayS}}</option>
-                @foreach ($filter_days_box as $item)
+                style="width:50%;">
+                <option>First Page</option>
+                @foreach ($__DAYS__CATE as $__ITEM__)
                     <a>
-                        <option value="{{ $item }}">{{ $item }}</option>
+                        <?php  if($__ITEM__ != $__CURRENT__DATE){ ?>
+                            <option value="{{ $__ITEM__ }}">{{ $__ITEM__ }}</option>  
+                        <?php } ?>
                     </a>
                 @endforeach
             </select>
-            <div style="height:100%;" class="mx-2">
-                <button style="height:100%;" type="submit" class="btn btn-outline-primary">Filter List By Day</button>
+            <div style="height:100%;width:50%;" class="mx-2">
+                <button style="height:100%;width:100%;" type="submit" class="btn btn-outline-primary">Filter List By Day</button>
             </div>
         </form>
     </div>
@@ -101,14 +102,14 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($records as $item)
+                @foreach ($__DATA__FILTER as $__ITEM)
                     <tr>
-                        <th scope="row">{{ $item->id }}</th>
-                        <td>{{ $item->IP }}</td>
-                        <td>{{ $item->requestName }}</td>
-                        <td>{{ $item->id }}</td>
-                        <td>{{ $item->status }}</td>
-                        <td>{{ $item->created_at->setTimezone('Turkey')->format('m-d-Y g:i:s A') }}</td>
+                        <th scope="row">{{ $__ITEM->id }}</th>
+                        <td>{{ $__ITEM->IP }}</td>
+                        <td>{{ $__ITEM->requestName }}</td>
+                        <td>{{ $__ITEM->id }}</td>
+                        <td>{{ $__ITEM->status }}</td>
+                        <td>{{ $__ITEM->created_at->format('m-d-Y H:i:s A') }}</td>
                         {{-- <td>
                             <a href="{{ route('downloadResponse',['id'=>$item->id]) }}">
                                <button type="button" class="btn btn-success">Download</button>
@@ -121,8 +122,8 @@
     </div>
     <div style="width:100%;h-[50px];display:flex;justify-content:center;aling-items:center;margin-top:7px;">
         <div style="width: 100%;display: flex;justify-content: center;align-items: center;">
-            <div style="flex:1;display: flex;justify-content: end;height: 100%;align-items: center;margin-top: 10px;">{{ $records->withQueryString()->links('pagination::bootstrap-4') }}</div>
-        <div style="flex:1;display: flex;justify-content:end;margin-right: 7vw;">Page {{ $records->currentPage()  }} of {{ $records->lastPage() }} &nbsp;(total Request : {{ $total_id }}) </div>
+            <div style="flex:1;display: flex;justify-content: end;height: 100%;align-items: center;margin-top: 10px;">{{ $__DATA__FILTER->withQueryString()->links('pagination::bootstrap-4') }}</div>
+        <div style="flex:1;display: flex;justify-content:end;margin-right: 7vw;">Page {{ $__DATA__FILTER->currentPage()  }} of {{ $__DATA__FILTER->lastPage() }} &nbsp;(total Request :) </div>
         </div>
     </div>
     <!-- JavaScript Bundle with Popper -->

@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\swaggerController;
 use App\Http\Controllers\usersController;
@@ -14,8 +13,6 @@ use App\Http\Controllers\Transport_supplierid_transportid_optioncodeController;
 use App\Http\Controllers\hotel_supplierid_providercodeController;
 use App\Http\Controllers\accommodationsController;
 use App\Http\Controllers\accommodations_allController;
-use App\Http\Controllers\createuserController;
-use App\Http\Controllers\updateuserController;
 use App\Http\Controllers\agenciesController;
 use App\Http\Controllers\Agancy_idController;
 use App\Http\Controllers\AgencyCreditController;
@@ -41,8 +38,6 @@ use App\Http\Controllers\package__holidayPackage_idController;
 use App\Http\Controllers\travelidea_ideaid_lan_currencyController;
 use App\Http\Controllers\travelidea_idea_languageController;
 use App\Http\Controllers\tripIdeasController;
-use App\Http\Controllers\createTripIdasController;
-use App\Http\Controllers\updateTripIdeasController;
 use App\Http\Controllers\tripIdeas_idController;
 use App\Http\Controllers\delete__TripIdeasCategoriesController;
 use App\Http\Controllers\get__all__destinationController;
@@ -57,11 +52,12 @@ use App\Http\Controllers\agencyManager;
 use App\Http\Controllers\transportBase;
 use App\Http\Controllers\LogForm;
 use App\Http\Controllers\ExcelCSVController;
+use App\Http\Controllers\updateuserController;
+use App\Http\Controllers\createTripIdasController;
+use App\Http\Controllers\createuserController;
+use App\Http\Controllers\updateTripIdeasController;
 
-// API GET METHOD
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', function () {return view('welcome');});
 Route::get('/get__user/{username}/{password}', [usersController::class, 'index']);
 Route::get('/get__user_id/{username}/{accessToken?}', [userController::class, 'index']);
 Route::get('/get__hotel/{supplierid}', [hotelsController::class, 'index']);
@@ -86,7 +82,7 @@ Route::get('/swagger', [swaggerController::class, 'index']);
 Route::get('/get__agencies__all', [agenciesController::class, 'index']);
 Route::get('/get__agencies__id', [Agancy_idController::class, 'index']);
 Route::get('/get__agencyCredit/{agency}', [AgencyCreditController::class, 'index']);
-Route::get('/get_ agencyManager/{agencyManagerID}', [ agencyManager::class, 'index']);
+Route::get('/get_ agencyManager/{agencyManagerID}', [agencyManager::class, 'index']);
 Route::get('/get__usersbyAgency', [usersbyAgencyController::class, 'index']);
 Route::get('/get__alluser', [allUsersController::class, 'index']);
 Route::get('/get__golfbySupplier/{supplierid}', [golfbySupplierController::class, 'index']);
@@ -113,16 +109,15 @@ Route::get('/get_closedTour_optionCode/{suplierid}/{closertourcode}/{optionCode}
 Route::get('/create_user_copy', [CP_CLOUD_DB::class, 'index']);
 Route::get('/get_allAgency', [agencyAllController::class, 'index']);
 Route::get('/get_transportBase', [transportBase::class, 'index']);
-// API POST METHOD
-Route::post('/create__user', [createuserController::class, 'index']);
-Route::post('/update__user', [updateuserController::class, 'index']);
-Route::post('/create__TripIdeasCategories', [createTripIdasController::class, 'index']);
-Route::put('/update__TripIdeasCategories', [updateTripIdeasController::class, 'index']);
-
-// LOG SYSTEM API
 Route::get('/filterbyday', [LogForm::class, 'filterbyday'])->name('filterbyday');
 Route::get('/logList', [LogForm::class, 'LogList'])->name('logList');
 Route::get('/log/{id?}', [LogForm::class, 'LoginForm'])->name('log');
 Route::get('/downloadResponse/{id}', [LogForm::class, 'downloadResponse'])->name('downloadResponse');
+
+
 Route::post('checkLog', [LogForm::class, 'checkLog'])->name('checklog');
 Route::post('/csv-gen', [ExcelCSVController::class, 'export'])->name('export');
+Route::post('/create__user', [createuserController::class, 'index']);
+Route::post('/update__user', [updateuserController::class, 'index']);
+Route::post('/create__TripIdeasCategories', [createTripIdasController::class, 'index']);
+Route::put('/update__TripIdeasCategories', [updateTripIdeasController::class, 'index']);

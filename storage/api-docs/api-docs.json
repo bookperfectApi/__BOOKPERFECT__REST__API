@@ -6,7 +6,7 @@
     },
     "servers": [
         {
-            "url": "https://cms.hitrooms.com/rest-api"
+            "url": "https://localhost:8000"
         }
     ],
     "paths": {
@@ -24,13 +24,37 @@
                 }
             }
         },
-        "/get__agencyCredit": {
+        "/get__agencyCredit/{agency}": {
             "get": {
                 "tags": [
                     "@Users and Agencies"
                 ],
-                "summary": "GET AGENCY CREDIT BALANCE BY ITS ID",
-                "operationId": "15",
+                "summary": "USERS AND AGENCIES",
+                "operationId": "159",
+                "parameters": [
+                    {
+                        "name": "agency",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/create_user_copy": {
+            "get": {
+                "tags": [
+                    "@Users and Agencies"
+                ],
+                "summary": "GET USERS AND COPY CLOUD DB",
+                "operationId": "1302",
                 "responses": {
                     "200": {
                         "description": "Success"
@@ -144,6 +168,44 @@
                 }
             }
         },
+        "/get_allAgency": {
+            "get": {
+                "tags": [
+                    "@Users and Agencies"
+                ],
+                "summary": "GET ALL Agency",
+                "operationId": "150",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get_ agencyManager/{agencyManagerID}": {
+            "get": {
+                "tags": [
+                    "@Users and Agencies"
+                ],
+                "summary": "USERS AND AGENCIES",
+                "operationId": "158",
+                "parameters": [
+                    {
+                        "name": "agencyManagerID",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
         "/get__airline__all": {
             "get": {
                 "tags": [
@@ -165,6 +227,78 @@
                 ],
                 "summary": "GET ALL USERS",
                 "operationId": "16",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get_Closed_Tour/{suplierid}/{closertourcode}": {
+            "get": {
+                "tags": [
+                    "@Contracts"
+                ],
+                "summary": "GET CLOSET TOUR BY SUPPLIER ID AND CLOSEDTOURCODE",
+                "operationId": "1300",
+                "parameters": [
+                    {
+                        "name": "suplierid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "closertourcode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get_closedTour_optionCode/{suplierid}/{closertourcode}/{optionCode}": {
+            "get": {
+                "tags": [
+                    "@Contracts"
+                ],
+                "summary": "GET CLOSET TOUR BY SUPPLIER ID AND CLOSEDTOURCODE AND OPTIOIN CODE",
+                "operationId": "1301",
+                "parameters": [
+                    {
+                        "name": "suplierid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "closertourcode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "optionCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "Success"
@@ -238,6 +372,70 @@
                         "name": "DrupalCityID",
                         "in": "query",
                         "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/create__user": {
+            "post": {
+                "tags": [
+                    "@Users and Agencies"
+                ],
+                "summary": "CREATE USER",
+                "operationId": "240",
+                "parameters": [
+                    {
+                        "name": "Email",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Name",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Lastname",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Country",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Telephone",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Password",
+                        "in": "query",
+                        "required": true,
                         "schema": {
                             "type": "string"
                         }
@@ -868,6 +1066,20 @@
                         }
                     }
                 ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get_transportBase": {
+            "get": {
+                "tags": [
+                    "@Web content"
+                ],
+                "summary": "Web content",
+                "operationId": "350",
                 "responses": {
                     "200": {
                         "description": "Success"

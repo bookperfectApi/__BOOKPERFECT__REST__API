@@ -17,6 +17,7 @@ class LogForm extends Controller
   public function LoginForm($id = null)
   {
     // log::truncate();
+    // dd('PROGRESS STOPPED');
     // DB::statement(`SET  @num := 0;
 
     // UPDATE logTable SET id = @num := (@num+1);
@@ -56,55 +57,58 @@ class LogForm extends Controller
       $id = $item->id + 1;
       $total_id = $total_id + 1;
     }
-    
+
 
     $filter_days_box = array_unique($days_box);
     $dateList = log::orderBy('id', 'DESC')->get();
     return view('logList', compact(
-      'records', 
-      'id', 
-      'filter_days_box', 
-      'dateList', 
-      'newDate', 
+      'records',
+      'id',
+      'filter_days_box',
+      'dateList',
+      'newDate',
       'prevmonth',
       'total_id',
-      ));
+    ));
   }
-  public function filterbyday(Request $request)
-  {
-    $dayS = $request->day;
-    if ($request->day == 'First Page') {
-      return redirect()->route('logList');
-    } else {
-      $id = null;
-      $days_box = array();
-      $counter = 0;
-      $days = log::all();
-      foreach ($days as $day) {
-        $date = $day->created_at;
-        $days_box[$counter] = $date->setTimezone('Turkey')->format('m-d-Y');
-        $counter = $counter + 1;
-      }
-      $collectiveId = log::where('date', 'like', '%' . $request->day . '%')->get();
-      $total_id = 0;
-      foreach ($collectiveId as $item) {
-        $id = $item->id + 1;
-        $total_id = $total_id+1;
-      }
-      $filter_days_box = array_unique($days_box);
-      $records = log::where('date', '=', $request->day)->paginate(20);
-      $dateList = log::orderBy('id', 'DESC')->get();
 
-      return view('filterday', compact('records', 'id', 'filter_days_box', 'dateList', 'day', 'dayS','total_id'));
+
+
+  public function filterbyday(Request $__REQUEST)
+  {
+
+    // log::truncate();
+
+    if ($__REQUEST->day == 'First Page') {
+      return redirect()->route('logList');
     }
+    $__FORMAT__DATE = Carbon::parse($__REQUEST->day)->format('Y-d-m');
+    $__DATA__FILTER = log::where('created_at', 'LIKE', '%' . $__FORMAT__DATE . '%')->paginate(20);
+    $__RECORDS = log::all();
+    $__COUNTER = 0;
+    $__ID__COUNTER = 0;
+    $__DAYS__CATE = array();
+    $__CURRENT__DATE = substr($__FORMAT__DATE, 0, 10);
+    foreach ($__RECORDS as $__ITEM) {
+      $__ID__COUNTER = $__ID__COUNTER + 1;
+      if (!array_search(substr($__ITEM->date, 0, 10), $__DAYS__CATE)) {
+        $__DAYS__CATE[$__COUNTER] = substr($__ITEM->date, 0, 10);
+        $__COUNTER = $__COUNTER + 1;
+      }
+    }
+
+    return view('filterday', compact('__DATA__FILTER', '__DAYS__CATE', '__ID__COUNTER', '__CURRENT__DATE'));
   }
+
+
+
   public function downloadResponse($id)
   {
     $row = log::find($id);
-    $content = ['TYPE OF REQUEST :'.$row->requestName.'<br><br>'.'RESPONSE :'.$row->response];
-    $fileName = '__response__'.$row->id.'.txt';
+    $content = ['TYPE OF REQUEST :' . $row->requestName . '<br><br>' . 'RESPONSE :' . $row->response];
+    $fileName = '__response__' . $row->id . '.txt';
     $headers = [
-      'Content-type' => 'text/plain', 
+      'Content-type' => 'text/plain',
       'Content-Disposition' => sprintf('attachment; filename="%s"', $fileName),
       'Content-Length' => sizeof($content)
     ];

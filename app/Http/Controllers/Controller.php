@@ -49,6 +49,7 @@ class Controller extends BaseController
     public function log($__REQUESTNAME, $__IP, $__STATUS, $__RESPONSE)
     {
         //RECODE IN DATABASE : SECTION
+
         log::create([
             'requestName'  => $__REQUESTNAME,
             'IP'           => $__IP,

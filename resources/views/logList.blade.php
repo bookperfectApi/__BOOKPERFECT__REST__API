@@ -73,9 +73,9 @@
         </div>
     </div>
     <div style="width:100%;height:10vh;display:flex;justify-content:center;align-items:center;">
-        <form action="{{ route('filterbyday') }}" method="GET" style="width:50%;height:60%;display: flex;">
+        <form action="{{ route('filterbyday') }}" method="GET" style="width:40%;height:60%;display: flex;">
             <select class="form-select form-select-lg" aria-label=".form-select-lg example" name="day"
-                style="width:80%;">
+                style="width:50%;">
                 <option>First Page</option>
                 @foreach ($filter_days_box as $item)
                     <a>
@@ -83,8 +83,8 @@
                     </a>
                 @endforeach
             </select>
-            <div style="height:100%;" class="mx-2">
-                <button style="height:100%;" type="submit" class="btn btn-outline-primary">Filter List By Day</button>
+            <div style="height:100%;width:50%;" class="mx-2">
+                <button style="height:100%;width:100%;" type="submit" class="btn btn-outline-primary">Filter List By Day</button>
             </div>
         </form>
     </div>
@@ -109,7 +109,7 @@
                         <td>{{ $item->requestName }}</td>
                         <td>{{ $item->id }}</td>
                         <td>{{ $item->status }}</td>
-                        <td>{{ $item->created_at->setTimezone('Turkey')->format('m-d-Y g:i:s A') }}</td>
+                        <td>{{ $item->created_at->format('m-d-Y H:i:s A') }}</td>
                         {{-- <td>
                             <a href="{{ route('downloadResponse',['id'=>$item->id]) }}">
                                <button type="button" class="btn btn-success">Download</button>

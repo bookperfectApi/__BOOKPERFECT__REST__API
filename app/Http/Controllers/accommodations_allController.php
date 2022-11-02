@@ -24,7 +24,7 @@ class accommodations_allController extends Controller
 
     public function index()
     {
-        
+
         $curl = curl_init();
         curl_setopt_array($curl, array(
             CURLOPT_URL => "https://bookperfect.paquetedinamico.com/resources/accommodations/preferred/bookperfect",
@@ -45,9 +45,9 @@ class accommodations_allController extends Controller
             echo "cURL Error #:" . $err;
             $status = 0;
         } else {
-            if(isset(json_decode($response, true)["error"])){
+            if (isset(json_decode($response, true)["error"])) {
                 $status = 0;
-            }else{
+            } else {
                 $status = 1;
             }
             return $this->log(url()->current(), request()->ip(), $status, $response);
