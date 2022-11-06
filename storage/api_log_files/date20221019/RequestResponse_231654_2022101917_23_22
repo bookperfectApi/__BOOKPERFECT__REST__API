@@ -1,0 +1,2 @@
+RequestName:  https://cms.hitrooms.com/rest-api/get__user/saip11@gmail.com/sai123
+Response: {"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJib29rcGVyZmVjdC1zYWlwMTFAZ21haWwuY29tIiwiZXhwIjoxNjY2MTkxMjAxLCJqdGkiOiIxRTBGNjkyMi02MDZGLTQ3MDAtQTdGQy1BNjU0NDgxOTE4Q0UifQ.9-bydXVnpBklTn48LQvB7t4LZlogv8XlQapWzfQQKANFNcnuo8xTuqhllGmnpUelrcCeLzN9kmNI3b4da0lxaw","expirationInSeconds":1800}

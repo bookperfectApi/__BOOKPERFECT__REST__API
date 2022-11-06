@@ -1,0 +1,2 @@
+RequestName:  https://cms.hitrooms.com/rest-api/create__user
+Response: {"status":"UNAUTHORIZED","error":["You are not allowed to assign super profiles"]}

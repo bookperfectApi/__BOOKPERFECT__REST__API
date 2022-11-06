@@ -1,0 +1,2 @@
+RequestName:  https://cms.hitrooms.com/rest-api/get__user/apiuser/Apiuser@2022
+Response: {"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJib29rcGVyZmVjdC1hcGl1c2VyIiwiZXhwIjoxNjY1NzcwMDIyLCJqdGkiOiIxRkU1NjAxQS01ODk1LTRBMEEtOEM3Ni05MDMxQzIyQkE0ODcifQ.0mAcdllkNLmORfHzMIIuFJwGP4d2QkIAFSEfAmq62sasINLCO7h7CLxn-q-bHZsbzlIJvHWdwV5IGNqKwFuPcQ","expirationInSeconds":1800}

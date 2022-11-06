@@ -1,0 +1,2 @@
+RequestName:  https://cms.hitrooms.com/rest-api/get__user/Saip/Saip@2022
+Response: {"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJib29rcGVyZmVjdC1TYWlwIiwiZXhwIjoxNjY1NzM2NTA0LCJqdGkiOiIzREQ3MjgzNi02OUVDLTQxRTUtOEIxRS02NTBDQThGNDg5MUUifQ.fDz-p1Ph_sb0wQYTM6vX1eqv3u5C69zFgawHe0ebUHmq0xPblnS1GnsrXzidNnTknJiApdrS10b6LnbkIr4reQ","expirationInSeconds":1800}

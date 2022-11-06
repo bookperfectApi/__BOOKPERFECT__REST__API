@@ -1,0 +1,1417 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "",
+        "version": "... BOOKPERFECT API DESIGNED BY HOTELISTAN COMPANY ..."
+    },
+    "servers": [
+        {
+            "url": "http://localhost/public_html/__REST__API__"
+        }
+    ],
+    "paths": {
+        "/get__agencies__id": {
+            "get": {
+                "tags": [
+                    "@Users and Agencies"
+                ],
+                "summary": "GET Agency BY ID",
+                "operationId": "14",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__agencyCredit/{agency}": {
+            "get": {
+                "tags": [
+                    "@Users and Agencies"
+                ],
+                "summary": "USERS AND AGENCIES",
+                "operationId": "159",
+                "parameters": [
+                    {
+                        "name": "agency",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/create_user_copy": {
+            "get": {
+                "tags": [
+                    "@Users and Agencies"
+                ],
+                "summary": "GET USERS AND COPY CLOUD DB",
+                "operationId": "1302",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__promotioncode": {
+            "get": {
+                "tags": [
+                    "@Web content"
+                ],
+                "summary": "GET PROMOTIONCODE",
+                "operationId": "33",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__transport_supplier_option_Code/{supplierid}/{transportid}/{optioncode}": {
+            "get": {
+                "tags": [
+                    "@Contracts"
+                ],
+                "summary": "GET TRANSPORT BY SUPPLIERID AND TRANSPORTID AND OPTIONCODE",
+                "operationId": "12",
+                "parameters": [
+                    {
+                        "name": "supplierid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "transportid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "optioncode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__accommodations__by__id/{accommodationId}": {
+            "get": {
+                "tags": [
+                    "@Web content"
+                ],
+                "summary": "GET ACCOMMODATION BY ACCOMMODATIONID",
+                "operationId": "22",
+                "parameters": [
+                    {
+                        "name": "accommodationId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__accommodations__all": {
+            "get": {
+                "tags": [
+                    "@Web content"
+                ],
+                "summary": "GET ALL ACCOMMODATION",
+                "operationId": "21",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__agencies__all": {
+            "get": {
+                "tags": [
+                    "@Users and Agencies"
+                ],
+                "summary": "GET ALL Agency",
+                "operationId": "13",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get_allAgency": {
+            "get": {
+                "tags": [
+                    "@Users and Agencies"
+                ],
+                "summary": "GET ALL Agency",
+                "operationId": "150",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get_ agencyManager/{agencyManagerID}": {
+            "get": {
+                "tags": [
+                    "@Users and Agencies"
+                ],
+                "summary": "USERS AND AGENCIES",
+                "operationId": "158",
+                "parameters": [
+                    {
+                        "name": "agencyManagerID",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__airline__all": {
+            "get": {
+                "tags": [
+                    "@Web content"
+                ],
+                "summary": "GET AIRLINE",
+                "operationId": "26",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__alluser": {
+            "get": {
+                "tags": [
+                    "@Users and Agencies"
+                ],
+                "summary": "GET ALL USERS",
+                "operationId": "16",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get_Closed_Tour/{suplierid}/{closertourcode}": {
+            "get": {
+                "tags": [
+                    "@Contracts"
+                ],
+                "summary": "GET CLOSET TOUR BY SUPPLIER ID AND CLOSEDTOURCODE",
+                "operationId": "1300",
+                "parameters": [
+                    {
+                        "name": "suplierid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "closertourcode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get_closedTour_optionCode/{suplierid}/{closertourcode}/{optionCode}": {
+            "get": {
+                "tags": [
+                    "@Contracts"
+                ],
+                "summary": "GET CLOSET TOUR BY SUPPLIER ID AND CLOSEDTOURCODE AND OPTIOIN CODE",
+                "operationId": "1301",
+                "parameters": [
+                    {
+                        "name": "suplierid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "closertourcode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "optionCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__countries__all": {
+            "get": {
+                "tags": [
+                    "@Web content"
+                ],
+                "summary": "GET COUNTRIES",
+                "operationId": "27",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/create__TripIdeasCategories": {
+            "post": {
+                "tags": [
+                    "@TripIdeasCategories"
+                ],
+                "summary": "CREATE TRIPIDEAS",
+                "operationId": "50",
+                "parameters": [
+                    {
+                        "name": "HotelLocationCity",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "HotelLocationCountry",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "HotelLocationContinent",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "HotelID",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "HotelStartRate",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "DrupalCityID",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/create__user": {
+            "post": {
+                "tags": [
+                    "@Users and Agencies"
+                ],
+                "summary": "CREATE USER",
+                "operationId": "240",
+                "parameters": [
+                    {
+                        "name": "Email",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Name",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Lastname",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Country",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Telephone",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Password",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/delete__TripIdeasCategories/{HotelId}": {
+            "get": {
+                "tags": [
+                    "@TripIdeasCategories"
+                ],
+                "summary": "DELETE BY HOTEL ID",
+                "operationId": "58",
+                "parameters": [
+                    {
+                        "name": "HotelId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__destination/{city}": {
+            "get": {
+                "tags": [
+                    "@Web content"
+                ],
+                "summary": "GET DESTINATION BY CITY",
+                "operationId": "28",
+                "parameters": [
+                    {
+                        "name": "city",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__destination__by_code/{code}": {
+            "get": {
+                "tags": [
+                    "@Web content"
+                ],
+                "summary": "GET ALL DESTINATION",
+                "operationId": "31",
+                "parameters": [
+                    {
+                        "name": "code",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__Booking_all/{from}/{to}": {
+            "get": {
+                "tags": [
+                    "@Booking"
+                ],
+                "summary": "GET ALL BOOKING",
+                "operationId": "200",
+                "parameters": [
+                    {
+                        "name": "from",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "to",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "lang",
+                        "in": "path",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__Booking_ref/{ref}": {
+            "get": {
+                "tags": [
+                    "@Booking"
+                ],
+                "summary": "GET ALL BOOKING ACCORDING REF",
+                "operationId": "100",
+                "parameters": [
+                    {
+                        "name": "ref",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__golfbySupplier/{supplierid}": {
+            "get": {
+                "tags": [
+                    "@Contracts"
+                ],
+                "summary": "GET GOLF BY SUPPLIERID",
+                "operationId": "1",
+                "parameters": [
+                    {
+                        "name": "supplierid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__hotel_supplierid_provider_code/{supplierid}/{providercode}": {
+            "get": {
+                "tags": [
+                    "@Contracts"
+                ],
+                "summary": "GET HOTEL BY SUPPLIERID AND PROVIDERCODE",
+                "operationId": "3",
+                "parameters": [
+                    {
+                        "name": "supplierid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "providercode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__hotel/{supplierid}": {
+            "get": {
+                "tags": [
+                    "@Contracts"
+                ],
+                "summary": "GET HOTEL BY SUPPLIERID",
+                "operationId": "2",
+                "parameters": [
+                    {
+                        "name": "supplierid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__mealplan": {
+            "get": {
+                "tags": [
+                    "@Web content"
+                ],
+                "summary": "GET MEALPLAN",
+                "operationId": "32",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__package__all": {
+            "get": {
+                "tags": [
+                    "@Ideas and Packages"
+                ],
+                "summary": "GET ALL PACKAGES",
+                "operationId": "36",
+                "parameters": [
+                    {
+                        "name": "supplierid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "origin Code",
+                        "in": "path",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "month",
+                        "in": "path",
+                        "required": false,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "enum",
+                                "enum": [
+                                    "January",
+                                    "February",
+                                    "March",
+                                    "April",
+                                    "May",
+                                    "June",
+                                    "July",
+                                    "August",
+                                    "September",
+                                    "October",
+                                    "November",
+                                    "December"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "name": "destinations",
+                        "in": "path",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "lang",
+                        "in": "path",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "currency",
+                        "in": "path",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "countryCode",
+                        "in": "path",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "onlyVisible",
+                        "in": "path",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "fromCreationDate",
+                        "in": "path",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "toCreationDate",
+                        "in": "path",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "first",
+                        "in": "path",
+                        "required": false,
+                        "schema": {
+                            "type": "integer($int32)"
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "in": "path",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "provider",
+                        "in": "path",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__package__holidayPackage_id_CURRENCY/{holidayPackageId}/{currency}": {
+            "get": {
+                "tags": [
+                    "@Ideas and Packages"
+                ],
+                "summary": "GET PACKAGE BY HOLIDAYPACKAGEID AND CURRENCY",
+                "operationId": "39",
+                "parameters": [
+                    {
+                        "name": "holidayPackageId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "currency",
+                        "in": "path",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__package__holidayPackage_id_LAN_CURRENCY/{holidayPackageId}": {
+            "get": {
+                "tags": [
+                    "@Ideas and Packages"
+                ],
+                "summary": "RETURN HOLIDAY PACKAGE BY ITS ID",
+                "operationId": "40",
+                "parameters": [
+                    {
+                        "name": "holidayPackageId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__preferredticket": {
+            "get": {
+                "tags": [
+                    "@Web content"
+                ],
+                "summary": "GET TICKET BY PREFERRED",
+                "operationId": "38",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__TripIdeasCategoriesHotelten__by__name/{city}": {
+            "get": {
+                "tags": [
+                    "@TripIdeasCategories"
+                ],
+                "summary": "GET 10 TOP HOTEL ID",
+                "operationId": "61",
+                "parameters": [
+                    {
+                        "name": "city",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/supplier": {
+            "get": {
+                "tags": [
+                    "@Contracts"
+                ],
+                "summary": "GET ALL SUPPLIER",
+                "operationId": "4",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/supplierid/{supplierid}": {
+            "get": {
+                "tags": [
+                    "@Contracts"
+                ],
+                "summary": "GET SUPPLIER BY SUPPLIERID",
+                "operationId": "5",
+                "parameters": [
+                    {
+                        "name": "supplierid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__theme": {
+            "get": {
+                "tags": [
+                    "@Web content"
+                ],
+                "summary": "GET THEME",
+                "operationId": "34",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__ticket_supplierid/{supplierid}": {
+            "get": {
+                "tags": [
+                    "@Contracts"
+                ],
+                "summary": "GET TICKET BY SUPPLIERID",
+                "operationId": "6",
+                "parameters": [
+                    {
+                        "name": "supplierid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__ticket/{supplierid}/{ticketcode}": {
+            "get": {
+                "tags": [
+                    "@Contracts"
+                ],
+                "summary": "GET TICKET BY SUPPLIERID AND TICKETCODE",
+                "operationId": "7",
+                "parameters": [
+                    {
+                        "name": "supplierid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "ticketcode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__transfer/{supplierid}": {
+            "get": {
+                "tags": [
+                    "@Contracts"
+                ],
+                "summary": "GET TRANSFER BY SUPPLIERID",
+                "operationId": "8",
+                "parameters": [
+                    {
+                        "name": "supplierid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__transfer_supplierid_transferid/{supplierid}/{transferid}": {
+            "get": {
+                "tags": [
+                    "@Contracts"
+                ],
+                "summary": "GET TRANSFER BY SUPPLIERID AND TRANSFERID",
+                "operationId": "9",
+                "parameters": [
+                    {
+                        "name": "supplierid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "transferid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get_transportBase": {
+            "get": {
+                "tags": [
+                    "@Web content"
+                ],
+                "summary": "Web content",
+                "operationId": "350",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__transport/{supplierid}": {
+            "get": {
+                "tags": [
+                    "@Contracts"
+                ],
+                "summary": "GET TRANSPORT BY SUPPLIERID",
+                "operationId": "10",
+                "parameters": [
+                    {
+                        "name": "supplierid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__transport_id/{supplierid}/{transportid}": {
+            "get": {
+                "tags": [
+                    "@Contracts"
+                ],
+                "summary": "GET TRANSPORT BY SUPPLIERID AND TRANSPORTID",
+                "operationId": "11",
+                "parameters": [
+                    {
+                        "name": "supplierid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "transportid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__travelidea_idea_language/{idea}": {
+            "get": {
+                "tags": [
+                    "@Ideas and Packages"
+                ],
+                "summary": "RETURN TRAVELIDEA BY IDEA_ID AND LANGUAGE",
+                "operationId": "42",
+                "parameters": [
+                    {
+                        "name": "idea",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__travelidea_ideaid_lan_currency/{idea}": {
+            "get": {
+                "tags": [
+                    "@Ideas and Packages"
+                ],
+                "summary": "RETURN TRAVELIDEA BY IDEA_ID AND LANGUAGE AND CURRENCY",
+                "operationId": "41",
+                "parameters": [
+                    {
+                        "name": "idea",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__TripIdeasCategories__by__name/{city}": {
+            "get": {
+                "tags": [
+                    "@TripIdeasCategories"
+                ],
+                "summary": "GET TRIPIDEAS BY CITY NAME",
+                "operationId": "57",
+                "parameters": [
+                    {
+                        "name": "city",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__TripIdeasCategories__by__id/{id}": {
+            "get": {
+                "tags": [
+                    "@TripIdeasCategories"
+                ],
+                "summary": "GET TRIPIDEAS BY ID",
+                "operationId": "56",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/update__TripIdeasCategories": {
+            "put": {
+                "tags": [
+                    "@TripIdeasCategories"
+                ],
+                "summary": "CREATE TRIPIDEAS",
+                "operationId": "51",
+                "parameters": [
+                    {
+                        "name": "HotelID",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "NewHotelID",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "DrupalCityID",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "int"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/update__user": {
+            "post": {
+                "tags": [
+                    "@Users and Agencies"
+                ],
+                "summary": "UPDATE USER",
+                "operationId": "24",
+                "parameters": [
+                    {
+                        "name": "Email",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Name",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Lastname",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Country",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Telephone",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Password",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__user_id/{username}": {
+            "get": {
+                "tags": [
+                    "@Users and Agencies"
+                ],
+                "summary": "GET USER BY ID",
+                "operationId": "17",
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__user/{username}/{password}": {
+            "get": {
+                "tags": [
+                    "@Users and Agencies"
+                ],
+                "summary": "GET USER BY USERNAME AND PASSWORD",
+                "operationId": "20",
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "password",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__usersbyAgency": {
+            "get": {
+                "tags": [
+                    "@Users and Agencies"
+                ],
+                "summary": "GET USERS BY Agency",
+                "operationId": "18",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        }
+    }
+}

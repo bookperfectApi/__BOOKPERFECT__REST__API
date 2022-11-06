@@ -1,0 +1,2 @@
+RequestName:  https://cms.hitrooms.com/rest-api/create__user
+Response: {"username":"saip11@gmail.com","name":"Test","surname":"Juan","email":"saip11@gmail.com","telephone":"05454023445","country":"TR","birthDate":"2022-08-22","documentNumber":"1234","active":true,"newsletter":true,"b2c":true,"profile":"USER","providerConfigs":[],"referralId":"63","agency":"bookperfect","rewards":[],"externalCode":"50","courtesyTitle":"MS"}

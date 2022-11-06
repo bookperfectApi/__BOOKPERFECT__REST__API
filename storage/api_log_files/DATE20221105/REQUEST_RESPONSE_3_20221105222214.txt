@@ -1,0 +1,2 @@
+REQUEST_NAME------->http://localhost/public_html/__REST__API__/get__agencyCredit/bookperfect
+RESPONSE------>{"balance":"0,00 €","agencyDepositMovementVO":[{"id":320594,"value":-300.0,"currency":"EUR","remark":"test","timestamp":"07/07/2022 10:49","user":"bookperfect-icarranza@travelcompositor.com"},{"id":320593,"value":300.0,"currency":"EUR","remark":"test","timestamp":"07/07/2022 10:48","user":"bookperfect-icarranza@travelcompositor.com"}]}

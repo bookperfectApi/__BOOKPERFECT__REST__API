@@ -1,0 +1,2 @@
+RequestName:  https://cms.hitrooms.com/rest-api/get__accommodations__by__id/142585____
+Response: {"status":"NOT_FOUND","error":["Hotel not found"]}
